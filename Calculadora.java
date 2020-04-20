@@ -1,0 +1,38 @@
+package practico1;
+import java.util.Scanner;
+
+
+public class Calculadora {
+	public static void main(String[] args) {
+		 Integer a = 0;
+		 Integer b = 0;
+		 Integer opcion;
+		 Integer resultado;
+		 Scanner teclado = new Scanner(System.in);
+
+		 do{
+		 System.out.println("Ingrese su operación /n 1 para sumar /n 2 para restar /n 3 para multiplicar /n 4 para dividir");
+		 opcion = Integer.valueOf(teclado.next());
+		 }while(opcion < 1 && opcion > 4) ;
+		 
+		 System.out.println("Ingrese el primer numero");
+		 a = Integer.valueOf(teclado.next());
+		 System.out.println("Ingrese el segundo numero");
+		 a = Integer.valueOf(teclado.next());
+		
+		 switch (opcion){
+		 case 1: 	resultado = a + b;
+		 break;
+		 case 2: 	resultado = a - b;
+		 break;
+		 case 3:	resultado = a * b;
+		 break;
+		 case 4:	resultado = a / b;
+		 break;
+		 default: 	resultado = 0;
+		 }
+		 System.out.println("El resultado es " + resultado.toString());
+		 }
+		 
+	
+	}
